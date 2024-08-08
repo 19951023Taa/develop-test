@@ -1,0 +1,9 @@
+初期構築手順    
+1.S3バケットを手動で作成    
+2.tfbackendファイルのバケット名を作成したバケット名に変更する    
+3.以下のコマンドでinit    
+terraform init -reconfigure -backend-config=tfbackend    
+    
+4.以下のコマンドでplan(適用内容の確認)、apply(実機適用)    
+terraform plan -var-file=_dev.tfvars    
+terraform apply -var-file=_dev.tfvars    
